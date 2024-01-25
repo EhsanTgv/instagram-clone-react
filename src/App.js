@@ -1,13 +1,13 @@
-import React from "react";
-import { Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'
+import Login from "./Pages/Login/Login";
 
-function App() {
+const App = () => {
   return (
     <div>
-      <Switch>
-        <Route exact path='/' render={() => <h1>Home</h1>} />
-        <Route exact path='/exp' render={() => <h1>Exp</h1>} />
-      </Switch>
+      <Routes>
+        <Route exactl path='/' element={Login} />
+      </Routes>
     </div>
   );
 }
