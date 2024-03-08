@@ -16,6 +16,6 @@ nav{
     width: 30px;
     padding: 0 20px;
 }
-.button-header{
-    
+.active{
+    border-bottom: firebrick;
 }

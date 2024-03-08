@@ -13,7 +13,12 @@ class App extends React.Component {
     return (
       <div>
         <Routes>
-          <Route exact path='/' render={() => !isLog ? <Login isLogin={this.hanleLogin} /> : <Home />} />
+          {
+            !isLog ?
+              <Route path='/' render={() => <Login isLogin={this.hanleLogin} />} />
+              :
+              <Route path='/' render={() => <Home />} />
+          }
           <Route path='*' element={NoMatch} />
         </Routes>
       </div>
